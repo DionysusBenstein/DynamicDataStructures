@@ -4,8 +4,7 @@ My Standard Template Library implementation.
 ---
 
 ### Planning to implementation a library: 
-
-#### Dynamic data structures:
+#### Dynamic data structures
 - [ ] Vector
 - [ ] List
 - [ ] Map
