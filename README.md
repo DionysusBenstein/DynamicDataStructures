@@ -3,7 +3,7 @@ My Standard Template Library implementation.
 
 ---
 
-#### Not implemented 
+### Planning to implementation a library: 
 
 - [ ] Card
 - [ ] Chips
