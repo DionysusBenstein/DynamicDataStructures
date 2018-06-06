@@ -4,15 +4,17 @@ My Standard Template Library implementation.
 ---
 
 ### Planning to implementation a library: 
-#### Dynamic data structures
 - [ ] Vector
-- [ ] List
+- [ ] Simply-connected list
+- [ ] Doubly linked list
+- [ ] Cyclic list
 - [ ] Map
 - [ ] Set
 - [ ] Multimap 
 - [ ] Multiset 
-- [ ] Select Field
-- [ ] Stepper
-- [ ] Subheaders
-- [ ] Toolbar
-
+- [ ] Stack
+- [ ] Deque
+- [ ] Queue
+- [ ] Binary trees
+- [ ] String
+- [ ] Bitset
