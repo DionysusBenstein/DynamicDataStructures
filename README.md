@@ -8,13 +8,12 @@ My implementation of the Dynamic Data Structures library, which contains the mai
 - [ ] Simply-connected list
 - [ ] Doubly linked list
 - [ ] Cyclic list
-- [ ] Map
-- [ ] Set
-- [ ] Multimap 
-- [ ] Multiset 
 - [ ] Stack
-- [ ] Deque
 - [ ] Queue
+- [ ] Deque
+- [ ] Map
+- [ ] Multimap 
+- [ ] Set
+- [ ] Multiset 
 - [ ] Binary trees
-- [ ] String
 - [ ] Bitset
