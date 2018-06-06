@@ -1,5 +1,5 @@
-# MySTL
-My Standard Template Library implementation. 
+# Dynamic Data Structures
+My implementation of the Dynamic Data Structures library, which contains the main dynamic data structures. 
 
 ---
 
