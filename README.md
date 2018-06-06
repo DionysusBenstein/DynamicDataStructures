@@ -5,12 +5,13 @@ My Standard Template Library implementation.
 
 ### Planning to implementation a library: 
 
-- [ ] Card
-- [ ] Chips
-- [ ] Discrete Slider
-- [ ] Grid List
-- [ ] Icon Menu
-- [ ] Search Field
+#### Dynamic data structures:
+- [ ] Vector
+- [ ] List
+- [ ] Map
+- [ ] Set
+- [ ] Multimap 
+- [ ] Multiset 
 - [ ] Select Field
 - [ ] Stepper
 - [ ] Subheaders
