@@ -1,6 +1,6 @@
 /*******************************************************************/
 
-/* Original File Name: ForwardList.h                               */
+/* Original File Name: ForwardList.cpp                             */
 
 /* Date: 13-06-2018                                                */
 
