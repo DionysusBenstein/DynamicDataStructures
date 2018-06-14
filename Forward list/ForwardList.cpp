@@ -8,8 +8,8 @@
 
 /* Copyright © 2018 Dionysus Benstein. All rights reserved.        */
 
-/* Description: Implementation of the dynamic data structure class
-				forward list.									   */
+/* Description: Implementation of the dynamic data structure class */
+/*				forward list.									   
 
 /*******************************************************************/
 
