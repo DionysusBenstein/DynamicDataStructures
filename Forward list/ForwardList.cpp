@@ -1,3 +1,19 @@
+/*******************************************************************/
+
+/* Original File Name: ForwardList.h                               */
+
+/* Date: 13-06-2018                                                */
+
+/* Developer: Dionysus Benstein                                    */
+
+/* Copyright © 2018 Dionysus Benstein. All rights reserved.        */
+
+/* Description: Implementation of the dynamic data structure class
+				forward list.									   */
+
+/*******************************************************************/
+
+
 #include "ForwardList.h"
 
 template <typename T>
