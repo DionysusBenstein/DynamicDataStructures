@@ -1,11 +1,14 @@
 #pragma once
 
+template <typename T>
 class ForwardList
 {
 public:
 	ForwardList();
 
 	~ForwardList();
+
+	void push_back(T data);
 
 private:
 	template <typename T>
@@ -21,5 +24,8 @@ private:
 			this->pNext = pNext;
 		}
 	};
+
+	Node<T> *head;
+	int size;
 };
 
