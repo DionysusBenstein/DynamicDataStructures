@@ -13,17 +13,16 @@
 
 /*******************************************************************/
 
-
 #include "ForwardList.h"
 
-template <typename T>
+template<typename T>
 ForwardList<T>::ForwardList()
 {
-	this->size = 0;
-	this->head = nullptr;
+	size = 0;
+	head = nullptr;
 }
 
-template <typename T>
+template<typename T>
 ForwardList<T>::~ForwardList()
 {
 
@@ -44,7 +43,9 @@ void ForwardList<T>::push_back(T data)
 		{
 			current = current->pNext;
 		}
-
 		current->pNext = new Node<T>(data);
+
 	}
+
+	size++;
 }

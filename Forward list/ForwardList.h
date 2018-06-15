@@ -14,18 +14,19 @@
 
 #pragma once
 
-template <typename T>
+template<typename T>
 class ForwardList
 {
 public:
 	ForwardList();
-
 	~ForwardList();
 
 	void push_back(T data);
 
+	int getSize() { return size; }
+	
 private:
-	template <typename T>
+	template<typename T>
 	class Node
 	{
 	public:
