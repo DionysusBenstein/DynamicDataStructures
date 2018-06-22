@@ -24,13 +24,13 @@ public:
 	void push_back(T data);
 
 	int getSize() { return size; }
-	
+
 private:
 	template<typename T>
 	class Node
 	{
 	public:
-		Node *pNext;
+		Node * pNext;
 		T data;
 
 		Node(T data = T(), Node *pNext = nullptr)

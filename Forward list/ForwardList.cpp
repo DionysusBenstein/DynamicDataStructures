@@ -44,7 +44,6 @@ void ForwardList<T>::push_back(T data)
 			current = current->pNext;
 		}
 		current->pNext = new Node<T>(data);
-
 	}
 
 	size++;
