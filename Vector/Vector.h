@@ -4,7 +4,10 @@ template <typename T>
 class Vector
 {
 public:
-	Vector() {}
+	Vector()
+	{
+		arr = nullptr;
+	}
 
 	Vector(const int value, const int size)
 	{
@@ -55,6 +58,20 @@ public:
 			return res;
 		}
 		else return false;
+	}
+
+	bool operator!=(const Vector &other)
+	{
+		if (this->size == other.size)
+		{
+			bool res;
+
+			for (int i = 0; i < other.size; i++)
+				res = this->arr[i] != other.arr[i];
+			
+			return res;
+		}
+		else return true;
 	}
 
 	void print()
