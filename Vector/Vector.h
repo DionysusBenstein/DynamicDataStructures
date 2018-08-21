@@ -49,6 +49,19 @@ public:
 		return *this;
 	}
 
+	bool operator==(const Vector &other)
+	{
+		if (this->size == other.size)
+		{
+			for (int i = 0; i < size; i++)
+			{
+				if (this->arr[i] == other.arr[i])
+					return true;				
+			}
+		}
+		else return false;		
+	}
+
 	void print()
 	{
 		for (int i = 0; i < this->size; i++)
