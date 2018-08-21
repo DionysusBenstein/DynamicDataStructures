@@ -38,6 +38,22 @@ public:
 		delete[] arr;
 	}
 
+	Vector& operator=(const Vector& other)
+	{
+		if (arr != nullptr)
+			delete[] arr;
+
+		this->size = other.size;
+		this->arr = new T[this->size];
+		
+		for (int i = 0; i < this->size; i++)
+		{
+			this->arr[i] = other.arr[i];
+		}
+
+		return *this;
+	}
+
 	void print()
 	{
 		for (int i = 0; i < this->size; i++)
@@ -45,6 +61,21 @@ public:
 			cout << arr[i] << " ";
 		}
 		cout << endl;
+	}
+
+	void pushBack(const T value)
+	{
+		T *newArr = new T[size + 1];
+
+		for (int i = 0; i < size; i++)
+		{
+			newArr[i] = arr[i];
+		}
+
+		delete[] arr;
+		newArr[size + 1] = value;
+		arr = newArr;
+		newArr = nullptr;
 	}
 
 private:
