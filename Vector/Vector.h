@@ -12,9 +12,7 @@ public:
 		arr = new T[this->size];
 
 		for (int i = 0; i < this->size; i++)
-		{
 			arr[i] = value;
-		}
 	}
 
 	Vector(const Vector& other)
@@ -23,9 +21,7 @@ public:
 		this->arr = new T[size];
 
 		for (int i = 0; i < size; i++)
-		{
 			this->arr[i] = other.arr[i];
-		}
 	}
 
 	~Vector()
@@ -42,9 +38,7 @@ public:
 		this->arr = new T[size];
 
 		for (int i = 0; i < size; i++)
-		{
 			this->arr[i] = other.arr[i];
-		}
 
 		return *this;
 	}
@@ -56,9 +50,8 @@ public:
 			bool res;
 
 			for (int i = 0; i < other.size; i++)
-			{
 				res = this->arr[i] == other.arr[i];
-			}
+
 			return res;
 		}
 		else return false;
@@ -67,9 +60,8 @@ public:
 	void print()
 	{
 		for (int i = 0; i < this->size; i++)
-		{
 			cout << arr[i] << " ";
-		}
+
 		cout << endl;
 	}
 
@@ -78,9 +70,7 @@ public:
 		T *newArr = new T[size + 1];
 
 		for (int i = 0; i < size; i++)
-		{
 			newArr[i] = arr[i];
-		}
 
 		delete[] arr;
 		newArr[size++] = value;
@@ -93,10 +83,8 @@ public:
 		T *newArr = new T[size--];
 
 		for (int i = 0; i < size; i++)
-		{
 			newArr[i] = arr[i];
-		}
-
+		
 		delete[] arr;
 		arr = newArr;
 		newArr = nullptr;
@@ -107,16 +95,12 @@ public:
 		T *newArr = new T[size + 1];
 
 		for (int i = 0; i < index; i++)
-		{
 			newArr[i] = arr[i];
-		}
 
 		newArr[index] = value;
 
 		for (int i = index + 1; i < size; i++)
-		{
 			newArr[i] = arr[i];
-		}
 
 		delete[] arr;
 		arr = newArr;
@@ -128,14 +112,10 @@ public:
 		T *newArr = new T[size--];
 
 		for (int i = 0; i < index; i++)
-		{
 			newArr[i] = arr[i];
-		}
 
 		for (int i = index; i < size; i++)
-		{
 			newArr[i] = arr[i + 1];
-		}
 
 		delete[] arr;
 		arr = newArr;
