@@ -4,10 +4,7 @@ template <typename T>
 class Vector
 {
 public:
-	Vector()
-	{
-		//
-	}
+	Vector() {}
 
 	//temp constructor
 	Vector(const int value, const int size)
@@ -45,7 +42,7 @@ public:
 
 		this->size = other.size;
 		this->arr = new T[this->size];
-		
+
 		for (int i = 0; i < this->size; i++)
 		{
 			this->arr[i] = other.arr[i];
@@ -74,6 +71,20 @@ public:
 
 		delete[] arr;
 		newArr[size++] = value;
+		arr = newArr;
+		newArr = nullptr;
+	}
+
+	void popBack()
+	{
+		T *newArr = new T[size--];
+
+		for (int i = 0; i < size; i++)
+		{
+			newArr[i] = arr[i];
+		}
+
+		delete[] arr;
 		arr = newArr;
 		newArr = nullptr;
 	}
