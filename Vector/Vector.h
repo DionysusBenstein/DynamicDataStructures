@@ -98,9 +98,28 @@ public:
 
 		newArr[index] = value;
 
-		for (int i = index + 1; i < size + 1; i++)
+		for (int i = index + 1; i < size; i++)
 		{
 			newArr[i] = arr[i];
+		}
+
+		delete[] arr;
+		arr = newArr;
+		newArr = nullptr;
+	}
+
+	void erase(const int index)
+	{
+		T *newArr = new T[size--];
+
+		for (int i = 0; i < index; i++)
+		{
+			newArr[i] = arr[i];
+		}
+
+		for (int i = index; i < size; i++)
+		{
+			newArr[i] = arr[i + 1];
 		}
 
 		delete[] arr;
