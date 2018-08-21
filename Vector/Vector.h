@@ -73,7 +73,7 @@ public:
 		}
 
 		delete[] arr;
-		newArr[size + 1] = value;
+		newArr[size++] = value;
 		arr = newArr;
 		newArr = nullptr;
 	}
