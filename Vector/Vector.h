@@ -89,7 +89,7 @@ public:
 
 	void insert(const T value, const int index)
 	{
-		T *newArr = new T[size++];
+		T *newArr = new T[size + 1];
 
 		for (int i = 0; i < index; i++)
 		{
@@ -98,7 +98,7 @@ public:
 
 		newArr[index] = value;
 
-		for (int i = index + 1; i < size; i++)
+		for (int i = index + 1; i < size + 1; i++)
 		{
 			newArr[i] = arr[i];
 		}
