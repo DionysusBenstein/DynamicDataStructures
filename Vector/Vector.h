@@ -6,7 +6,6 @@ class Vector
 public:
 	Vector() {}
 
-	//temp constructor
 	Vector(const int value, const int size)
 	{
 		this->size = size;
@@ -18,7 +17,6 @@ public:
 		}
 	}
 
-	//Copy constructor
 	Vector(const Vector& other)
 	{
 		this->size = other.size;
@@ -80,6 +78,27 @@ public:
 		T *newArr = new T[size--];
 
 		for (int i = 0; i < size; i++)
+		{
+			newArr[i] = arr[i];
+		}
+
+		delete[] arr;
+		arr = newArr;
+		newArr = nullptr;
+	}
+
+	void insert(const T value, const int index)
+	{
+		T *newArr = new T[size++];
+
+		for (int i = 0; i < index; i++)
+		{
+			newArr[i] = arr[i];
+		}
+
+		newArr[index] = value;
+
+		for (int i = index + 1; i < size; i++)
 		{
 			newArr[i] = arr[i];
 		}
