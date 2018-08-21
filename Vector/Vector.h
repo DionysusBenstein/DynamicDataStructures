@@ -20,9 +20,9 @@ public:
 	Vector(const Vector& other)
 	{
 		this->size = other.size;
-		this->arr = new T[this->size];
+		this->arr = new T[size];
 
-		for (int i = 0; i < this->size; i++)
+		for (int i = 0; i < size; i++)
 		{
 			this->arr[i] = other.arr[i];
 		}
@@ -39,9 +39,9 @@ public:
 			delete[] arr;
 
 		this->size = other.size;
-		this->arr = new T[this->size];
+		this->arr = new T[size];
 
-		for (int i = 0; i < this->size; i++)
+		for (int i = 0; i < size; i++)
 		{
 			this->arr[i] = other.arr[i];
 		}
@@ -53,13 +53,15 @@ public:
 	{
 		if (this->size == other.size)
 		{
-			for (int i = 0; i < size; i++)
+			bool res;
+
+			for (int i = 0; i < other.size; i++)
 			{
-				if (this->arr[i] == other.arr[i])
-					return true;				
+				res = this->arr[i] == other.arr[i];
 			}
+			return res;
 		}
-		else return false;		
+		else return false;
 	}
 
 	void print()
