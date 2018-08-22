@@ -64,12 +64,13 @@ public:
 	{
 		if (this->size == other.size)
 		{
-			bool res;
-
 			for (int i = 0; i < other.size; i++)
-				res = this->arr[i] != other.arr[i];
-			
-			return res;
+			{
+				while (this->arr[i] != other.arr[i])
+				{
+					return true;
+				}
+			}
 		}
 		else return true;
 	}
@@ -101,7 +102,7 @@ public:
 
 		for (int i = 0; i < size; i++)
 			newArr[i] = arr[i];
-		
+
 		delete[] arr;
 		arr = newArr;
 		newArr = nullptr;
