@@ -83,6 +83,11 @@ public:
 		return size;
 	}
 
+	bool empty()
+	{
+		return size == 0;
+	}
+
 	void print()
 	{
 		for (int i = 0; i < this->size; i++)
