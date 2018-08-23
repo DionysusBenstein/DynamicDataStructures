@@ -1,3 +1,19 @@
+﻿/*******************************************************************/
+
+/* Original File Name: Vector.h                                    */
+
+/* Date: ‎20-08-2018                                                */
+
+/* Developer: Dionysus Benstein                                    */
+
+/* Copyright © 2018 Dionysus Benstein. All rights reserved.        */
+
+/* Description: Реализация динамического массива переменного 
+   размера														   */
+
+/*******************************************************************/
+
+
 template <typename T>
 class Vector
 {
