@@ -1,5 +1,3 @@
-using namespace std;
-
 template <typename T>
 class Vector
 {
@@ -48,39 +46,45 @@ public:
 
 	bool operator==(const Vector &other)
 	{
-		if (this->size == other.size)
+		if (this->size != other.size) 
 		{
-			bool res;
-
-			for (int i = 0; i < other.size; i++)
-				res = this->arr[i] == other.arr[i];
-
-			return res;
+			return false;
 		}
-		else return false;
+		else 
+		{
+			for (int i = 0; i < size; i++)
+			{
+				if (this->arr[i] != other.arr[i])
+				{
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 
 	bool operator!=(const Vector &other)
 	{
 		if (this->size == other.size)
 		{
+			bool res;
+
 			for (int i = 0; i < other.size; i++)
 			{
-				while (this->arr[i] != other.arr[i])
-				{
-					return true;
-				}
+				res = this->arr[i] != other.arr[i];
 			}
 		}
 		else return true;
 	}
+	
+
 
 	void print()
 	{
 		for (int i = 0; i < this->size; i++)
-			cout << arr[i] << " ";
+			std::cout << arr[i] << " ";
 
-		cout << endl;
+		std::cout << std::endl;
 	}
 
 	void pushBack(const T value)
