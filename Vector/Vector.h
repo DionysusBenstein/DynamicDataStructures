@@ -55,9 +55,7 @@ public:
 			for (int i = 0; i < size; i++)
 			{
 				if (this->arr[i] != other.arr[i])
-				{
 					return false;
-				}
 			}
 		}
 		return true;
@@ -65,16 +63,19 @@ public:
 
 	bool operator!=(const Vector &other)
 	{
-		if (this->size == other.size)
+		if (this->size != other.size)
 		{
-			bool res;
-
-			for (int i = 0; i < other.size; i++)
+			return true;
+		}
+		else
+		{
+			for (int i = 0; i < size; i++)
 			{
-				res = this->arr[i] != other.arr[i];
+				if (this->arr[i] != other.arr[i])
+					return true;
 			}
 		}
-		else return true;
+		return false;
 	}
 	
 	size_t getSize()
