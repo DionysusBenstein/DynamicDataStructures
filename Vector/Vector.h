@@ -44,7 +44,7 @@ public:
 		return *this;
 	}
 
-	bool operator==(const Vector &other)
+	bool operator==(const Vector &other) const
 	{
 		if (this->size != other.size) 
 		{
@@ -61,7 +61,7 @@ public:
 		return true;
 	}
 
-	bool operator!=(const Vector &other)
+	bool operator!=(const Vector &other) const
 	{
 		if (this->size != other.size)
 		{
@@ -78,17 +78,22 @@ public:
 		return false;
 	}
 	
-	size_t getSize()
+	size_t getSize() const
 	{
 		return size;
 	}
 
-	bool empty()
+	void resize(size_t newSize)
+	{
+		size = newSize;
+	}
+
+	bool empty() const
 	{
 		return size == 0;
 	}
 
-	void print()
+	void print() const
 	{
 		for (int i = 0; i < this->size; i++)
 			std::cout << arr[i] << " ";
