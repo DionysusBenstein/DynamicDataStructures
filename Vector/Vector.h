@@ -13,7 +13,6 @@
 
 /*******************************************************************/
 
-
 template <typename T>
 class Vector
 {
@@ -92,6 +91,11 @@ public:
 			}
 		}
 		return false;
+	}
+
+	int& operator[](const int index)
+	{
+		return arr[index];
 	}
 	
 	size_t getSize() const
