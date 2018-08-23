@@ -77,7 +77,10 @@ public:
 		else return true;
 	}
 	
-
+	size_t getSize()
+	{
+		return size;
+	}
 
 	void print()
 	{
