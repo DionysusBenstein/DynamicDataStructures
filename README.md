@@ -4,8 +4,8 @@ My implementation of the Dynamic Data Structures library, which contains the mai
 ---
 
 ### Planning to implementation a library: 
-- [x] Vector — in developing
-- [x] Forward list — in developing
+- [x] Vector
+- [x] Forward list
 - [ ] List
 - [ ] Cyclic list
 - [ ] Stack
