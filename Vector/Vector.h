@@ -22,7 +22,7 @@ public:
 		arr = nullptr;
 	}
 
-	Vector(const int value, const int size)
+	Vector(const int size, const int value)
 	{
 		this->size = size;
 		arr = new T[this->size];
@@ -93,7 +93,7 @@ public:
 		return false;
 	}
 
-	int& operator[](const int index)
+	int& operator[](const int index) const
 	{
 		return arr[index];
 	}
