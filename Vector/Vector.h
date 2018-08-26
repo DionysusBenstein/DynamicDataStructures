@@ -33,8 +33,8 @@ public:
 
 	Vector(const Vector& other)
 	{
-		this->size = other.size;
-		this->arr = new T[size];
+		size = other.size;
+		arr = new T[size];
 
 		for (int i = 0; i < size; i++)
 			this->arr[i] = other.arr[i];
@@ -50,8 +50,8 @@ public:
 		if (arr != nullptr)
 			delete[] arr;
 
-		this->size = other.size;
-		this->arr = new T[size];
+		size = other.size;
+		arr = new T[size];
 
 		for (int i = 0; i < size; i++)
 			this->arr[i] = other.arr[i];
@@ -180,5 +180,5 @@ public:
 
 private:
 	T *arr;
-	int size;
+	size_t size;
 };
