@@ -78,19 +78,7 @@ public:
 
 	bool operator!=(const Vector &other) const
 	{
-		if (this->size != other.size)
-		{
-			return true;
-		}
-		else
-		{
-			for (int i = 0; i < size; i++)
-			{
-				if (this->arr[i] != other.arr[i])
-					return true;
-			}
-		}
-		return false;
+		return !(this->operator==(other));
 	}
 
 	int& operator[](const int index) const
