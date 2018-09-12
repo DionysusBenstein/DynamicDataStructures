@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 template <typename T>
 class Stack
 {
@@ -17,7 +21,7 @@ public:
 			data[i] = this->data[i];
 		}
 
-		data[i + 1] = value;
+		data[size + 1] = value;
 
 		this->data = data;
 		delete[] data;
@@ -27,7 +31,11 @@ public:
 	//temp
 	void print() const
 	{
-
+		for (int i = 0; i < size; i++)
+		{
+			cout << data[i] << " ";
+		}
+		count << endl;
 	}
 
 private:
