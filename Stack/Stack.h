@@ -1,3 +1,17 @@
+﻿/*******************************************************************/
+
+/* Original File Name: Stack.h                                     */
+
+/* Date: ‎12-09-2018                                                */
+
+/* Developer: Dionysus Benstein                                    */
+
+/* Copyright © 2018 Dionysus Benstein. All rights reserved.        */
+
+/* Description: Реализация стэка посредством динамического массива.*/
+
+/*******************************************************************/
+
 #include <iostream>
 
 using namespace std;
@@ -21,7 +35,7 @@ public:
 
 
 		delete[] this->data;
-		data[size + 1] = value;
+		data[size++] = value;
 		this->data = data;
 		data = nullptr;
 	}
