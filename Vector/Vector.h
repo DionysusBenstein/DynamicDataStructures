@@ -20,6 +20,7 @@ public:
 	Vector()
 	{
 		arr = nullptr;
+		size = 0;
 	}
 
 	Vector(const int size, const int value)
@@ -31,7 +32,7 @@ public:
 			arr[i] = value;
 	}
 
-	Vector(const Vector& other)
+	Vector(const Vector &other)
 	{
 		size = other.size;
 		arr = new T[size];
@@ -40,12 +41,19 @@ public:
 			this->arr[i] = other.arr[i];
 	}
 
+	Vector(const Vector &&other)
+	{
+		size = other.size;
+		arr = other.arr;
+		delete[] other.arr;
+	}
+
 	~Vector()
 	{
 		delete[] arr;
 	}
 
-	Vector& operator=(const Vector& other)
+	Vector& operator=(const Vector &other)
 	{
 		if (arr != nullptr)
 			delete[] arr;
@@ -58,7 +66,7 @@ public:
 
 		return *this;
 	}
-
+	
 	bool operator==(const Vector &other) const
 	{
 		if (this->size != other.size) 
@@ -81,7 +89,7 @@ public:
 		return !(this->operator==(other));
 	}
 
-	int& operator[](const int index) const
+	int& operator[](const int index) 
 	{
 		return arr[index];
 	}
@@ -103,7 +111,7 @@ public:
 
 	void print() const
 	{
-		for (int i = 0; i < this->size; i++)
+		for (size_t i = 0; i < this->size; i++)
 			std::cout << arr[i] << " ";
 
 		std::cout << std::endl;
