@@ -44,6 +44,20 @@ public:
 		data = nullptr;
 	}
 
+	void pop()
+	{
+		T* data = new T[size--];
+
+		for (int i = 0; i < size; i++)
+		{
+			data[i] = this->data[i];
+		}
+
+		delete[] this->data;
+		this->data = data;
+		data = nullptr;
+	}
+
 	//Temp method
 	void print()
 	{
