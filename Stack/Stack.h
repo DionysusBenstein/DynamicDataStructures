@@ -58,8 +58,13 @@ public:
 		data = nullptr;
 	}
 
+	size_t getSize() const
+	{
+		return this->size;
+	}
+
 	//Temp method
-	void print()
+	void print() const
 	{
 		for (int i = 0; i < size; i++)
 		{
