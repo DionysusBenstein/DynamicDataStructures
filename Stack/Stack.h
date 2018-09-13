@@ -63,6 +63,11 @@ public:
 		return this->size;
 	}
 
+	bool empty() const
+	{
+		return size == 0;
+	}
+
 	//Temp method
 	void print() const
 	{
