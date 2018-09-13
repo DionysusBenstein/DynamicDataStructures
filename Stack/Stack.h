@@ -26,6 +26,11 @@ public:
 		size = 0;
 	}
 
+	~Stack()
+	{
+		delete[] data;
+	}
+
 	void push(const T value)
 	{
 		T* data = new T[size + 1];
