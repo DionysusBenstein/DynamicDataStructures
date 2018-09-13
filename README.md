@@ -8,7 +8,7 @@ My implementation of the Dynamic Data Structures library, which contains the mai
 - [x] Forward list
 - [ ] List
 - [ ] Cyclic list
-- [ ] Stack
+- [x] Stack
 - [ ] Queue
 - [ ] Deque
 - [ ] Map
