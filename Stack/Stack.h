@@ -28,11 +28,10 @@ public:
 
 	void push(const T value)
 	{
-		T data = new T[size + 1];
+		T* data = new T[size + 1];
 
 		for (int i = 0; i < size; i++)
 			data[i] = this->data[i];
-
 
 		delete[] this->data;
 		data[size++] = value;
@@ -40,14 +39,14 @@ public:
 		data = nullptr;
 	}
 
-	//temp
-	void print() const
+	//Temp method
+	void print()
 	{
 		for (int i = 0; i < size; i++)
 		{
 			cout << data[i] << " ";
 		}
-		count << endl;
+		cout << endl;
 	}
 
 private:
