@@ -68,6 +68,11 @@ public:
 		return size == 0;
 	}
 
+	T& top()
+	{
+
+	}
+
 	//Temp method
 	void print() const
 	{
