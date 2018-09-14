@@ -70,7 +70,7 @@ public:
 
 	T& top()
 	{
-
+		return data[size - 1];
 	}
 
 	//Temp method
