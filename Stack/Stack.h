@@ -42,7 +42,7 @@ public:
 
 	friend istream& operator>>(istream& is, const Stack& other)
 	{
-		os >> other.data;
+		is >> other.data;
 		return is
 	}
 
