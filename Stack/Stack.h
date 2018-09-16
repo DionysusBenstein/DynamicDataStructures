@@ -31,6 +31,17 @@ public:
 		delete[] data;
 	}
 
+	friend ostream& operator<<(ostream& os, const Stack& other) 
+	{
+		for (int i = 0; i < other.size; i++)
+		{
+			os << other.data[i] << " ";
+		}
+		os << endl;
+
+		return os;
+	}
+
 	void push(const T value)
 	{
 		T* data = new T[size + 1];
