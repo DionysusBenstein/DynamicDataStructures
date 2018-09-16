@@ -31,15 +31,19 @@ public:
 		delete[] data;
 	}
 
-	friend ostream& operator<<(ostream& os, const Stack& other) 
+	friend ostream& operator<<(ostream& os, const Stack& other)
 	{
 		for (int i = 0; i < other.size; i++)
-		{
 			os << other.data[i] << " ";
-		}
-		os << endl;
 
+		os << endl;
 		return os;
+	}
+
+	friend istream& operator>>(istream& is, const Stack& other)
+	{
+		os >> other.data;
+		return is
 	}
 
 	void push(const T value)
