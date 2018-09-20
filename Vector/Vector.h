@@ -19,6 +19,7 @@ template <typename T>
 class Vector
 {
 public:
+	//Constructors
 	Vector()
 	{
 		arr = nullptr;
@@ -55,6 +56,7 @@ public:
 		delete[] arr;
 	}
 
+	//Operators
 	Vector& operator=(const Vector &other)
 	{
 		if (arr != nullptr)
@@ -96,6 +98,7 @@ public:
 		return arr[index];
 	}
 	
+	//Public methods
 	size_t getSize() const
 	{
 		return size;

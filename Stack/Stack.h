@@ -20,6 +20,7 @@ template <typename T>
 class Stack
 {
 public:
+	//Constructors
 	Stack()
 	{
 		data = nullptr;
@@ -31,6 +32,7 @@ public:
 		delete[] data;
 	}
 
+	//Operators
 	friend ostream& operator<<(ostream& os, const Stack& other)
 	{
 		for (int i = 0; i < other.size; i++)
@@ -46,6 +48,7 @@ public:
 		return is
 	}
 
+	//Public methods
 	void push(const T value)
 	{
 		T* data = new T[size + 1];
