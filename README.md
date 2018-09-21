@@ -11,7 +11,7 @@ My implementation of the Dynamic Data Structures library, which contains the mai
 - [x] Stack
 - [ ] Queue
 - [ ] Deque
-- [ ] Map
+- [x] Map
 - [ ] Multimap 
 - [ ] Set
 - [ ] Multiset 
