@@ -19,7 +19,11 @@ template <typename K, typename V>
 class Map
 {
 public:
-	
+	Map()
+	{
+		size = 0;
+		pair = nullptr;
+	}
 
 private:
 	struct Pair
@@ -29,5 +33,5 @@ private:
 	};
 
 	size_t size;
-	Pair pair[size];
+	Pair *pair;
 };
