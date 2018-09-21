@@ -2,13 +2,15 @@ template <typename K, typename V>
 class Map
 {
 public:
+	
 
 private:
-	class Pair
+	struct Pair
 	{
-	public:
-
-	private:
-
+		K key;
+		V value;
 	};
+
+	size_t size;
+	Pair pair[size];
 };
