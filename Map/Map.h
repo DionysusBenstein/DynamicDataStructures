@@ -44,7 +44,7 @@ public:
 	void print() const
 	{
 		for (size_t i = 0; i < this->size; i++)
-			cout << "Key: " << map[i].key << " = " << "Value: " << map[i].value << endl;
+			cout << "Key: " << map[i].key << "; " << "Value: " << map[i].value << endl;
 	}
 
 private:
