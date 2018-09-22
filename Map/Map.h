@@ -14,15 +14,37 @@
 /*******************************************************************/
 
 #pragma once
+#include <iostream>
+
+using namespace std;
 
 template <typename K, typename V>
 class Map
 {
 public:
+	//Constructors
 	Map()
 	{
 		size = 0;
-		pair = nullptr;
+		map = nullptr;
+	}
+
+	Map(K key, V value, size_t size)
+	{
+		this->size = size;
+		map = new Pair[this->size];
+		for (size_t i = 0; i < size; i++)
+		{
+			map[i].value = value;
+			map[i].key = key;
+		}
+	}
+
+	//Public methods
+	void print() const
+	{
+		for (size_t i = 0; i < this->size; i++)
+			cout << "Key: " << map[i].key << " = " << "Value: " << map[i].value << endl;
 	}
 
 private:
@@ -33,5 +55,5 @@ private:
 	};
 
 	size_t size;
-	Pair *pair;
+	Pair *map;	
 };
