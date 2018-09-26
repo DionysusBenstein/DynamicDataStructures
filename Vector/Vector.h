@@ -15,6 +15,8 @@
 
 #pragma once
 
+#include <fstream>
+
 template <typename T>
 class Vector
 {
@@ -57,6 +59,11 @@ public:
 	}
 
 	//Operators
+	ostream& operator<<(ostream& os, const Vector& vec)
+	{
+
+	}		
+
 	Vector& operator=(const Vector &other)
 	{
 		if (arr != nullptr)
