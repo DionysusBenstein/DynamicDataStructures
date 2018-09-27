@@ -61,7 +61,8 @@ public:
 	//Operators
 	ostream& operator<<(ostream& os, const Vector& vec)
 	{
-
+		for (int i = 0; i < size; i++)
+			os << arr[i];
 	}		
 
 	Vector& operator=(const Vector &other)
