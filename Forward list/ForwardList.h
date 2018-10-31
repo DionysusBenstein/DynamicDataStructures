@@ -30,7 +30,7 @@ private:
 	class Node
 	{
 	public:
-		Node * pNext;
+		Node *pNext;
 		T data;
 
 		Node(T data = T(), Node *pNext = nullptr)

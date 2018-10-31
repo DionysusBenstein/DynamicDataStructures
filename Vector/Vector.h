@@ -59,10 +59,12 @@ public:
 	}
 
 	//Operators
-	ostream& operator<<(ostream& os, const Vector& vec)
+	friend ostream& operator<<(ostream& os, const Vector& vec)
 	{
 		for (int i = 0; i < size; i++)
 			os << arr[i];
+
+		return os;
 	}		
 
 	Vector& operator=(const Vector &other)

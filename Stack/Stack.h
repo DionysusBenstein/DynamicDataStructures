@@ -36,17 +36,10 @@ public:
 	//Operators
 	friend ostream& operator<<(ostream& os, const Stack& other)
 	{
-		for (int i = 0; i < other.size; i++)
+		for (int i = 0; i < other.getSize(); i++)
 			os << other.data[i] << " ";
 
-		os << endl;
 		return os;
-	}
-
-	friend istream& operator>>(istream& is, const Stack& other)
-	{
-		is >> other.data;
-		return is
 	}
 
 	//Public methods
