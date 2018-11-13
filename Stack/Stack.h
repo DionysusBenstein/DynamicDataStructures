@@ -85,16 +85,6 @@ public:
 		return data[size - 1];
 	}
 
-	//Temp method
-	void print() const
-	{
-		for (int i = 0; i < size; i++)
-		{
-			cout << data[i] << " ";
-		}
-		cout << endl;
-	}
-
 private:
 	T* data;
 	size_t size;

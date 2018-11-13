@@ -15,7 +15,7 @@
 
 #pragma once
 
-#include <fstream>
+#include <iosteam>
 
 template <typename T>
 class Vector
@@ -123,15 +123,7 @@ public:
 	{
 		return size == 0;
 	}
-
-	void print() const
-	{
-		for (size_t i = 0; i < this->size; i++)
-			std::cout << arr[i] << " ";
-
-		std::cout << std::endl;
-	}
-
+	
 	void pushBack(const T value)
 	{
 		T *newArr = new T[size + 1];
