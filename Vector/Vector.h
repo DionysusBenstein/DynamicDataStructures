@@ -15,7 +15,7 @@
 
 #pragma once
 
-#include <iosteam>
+#include <iostream>
 
 template <typename T>
 class Vector
