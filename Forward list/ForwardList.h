@@ -8,7 +8,7 @@
 
 /* Copyright © 2018 Dionysus Benstein. All rights reserved.        */
 
-/* Description: Class dynamic data structure forward list.         */
+/* Description: Class dynamic data structure single linked list.   */
 
 /*******************************************************************/
 
@@ -18,16 +18,35 @@ template<typename T>
 class ForwardList
 {
 public:
+	ForwardList()
+	{
+		_size = 0;
+		head.p_next = nullptr;
+	}
+
+	void push_back(T data)
+	{
+		Node<T> node;
+		_size++;
+		head.p_next = &node;
+		node.p_next = nullptr;
+		node.data = data;
+	}
+
+
+	size_t size() const
+	{
+		return _size;
+	}
 
 private:
-	class Node
+	template<typename T>
+	struct Node
 	{
-	public:
-
-	private:
-		int counter;
-		Node* next;
 		T data;
+		Node* p_next;
 	};
 
+	Node<T> head;
+	int _size;
 };
