@@ -33,7 +33,11 @@ public:
 		node.data = data;
 	}
 
+	void pop_back()
+	{
 
+	}
+	
 	size_t size() const
 	{
 		return _size;
